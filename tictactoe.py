@@ -100,18 +100,18 @@ def draw_setup(values):
 player_dict = twoplayer_setup()
 
 # The players list aids in referring to player_dict 
-# and alternating between players more effectively.
+# and alternating between players more effectively on their turn.
 players = ["Player 1", "Player 2"]
 player_turn_count = 0
 
-# We show the active player how to refer to a section of the grid.
+# We show the players how to refer to a section of the grid.
 grid_reference()
 
-# The list holds the data for the game.
+# The list grid_values holds the data for the game.
 grid_values = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 while True:
-  # The variable j aids in alternating between active players.
+  # The variable j aids in alternating between players' turns.
   j = player_turn_count % 2
   player_active = players[j]
   # Active player phase starts.
