@@ -69,17 +69,17 @@ def winning_setup(player_icon, values):
   # diagonal match (similar to a backslash \).
   # We start by checking horizontal matches.
   for i in range(0, 9, 3):
-    if values[i] == player_icon and values[i + 1] == player_icon and values[i + 2] == player_icon:
+    if (values[i] and values[i + 1] and values[i + 2])== player_icon:
       return "horizontal match"
   # We check for vertical matches.
   for j in range(3):
-    if values[j] == player_icon and values[j + 3] == player_icon and values[j + 6] == player_icon:
+    if (values[j] and values[j + 3] and values[j + 6])== player_icon:
       return "vertical match"
   # We check for backwards diagonal matches.
-  if values[0] == player_icon and values[4] == player_icon and values[8] == player_icon:
+  if (values[0] and values[4] and values[8]) == player_icon:
     return "backward diagonal match"
   # We check for forwards diagonal matches.
-  if values[2] == player_icon and values[4] == player_icon and values[6] == player_icon:
+  if (values[2] and values[4] and values[6]) == player_icon:
     return "forward diagonal match"
 
 def draw_setup(values):
